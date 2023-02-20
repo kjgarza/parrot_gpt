@@ -57,7 +57,7 @@ Usage from the command line
 .. code:: sh
 
        $ export OPENAI_API_KEY={OPENAI_API_KEY}
-       $ parrot_gpt.cli -m ./path/to/your/filename -i crosssref -t datacite > output
+       $ parrot_gpt.cli -mf ./path/to/your/filename -i crosssref -t datacite > output
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/parrot_gpt.svg
    :target: https://pypi.python.org/pypi/parrot_gpt
