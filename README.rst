@@ -11,6 +11,7 @@ to input and output schemas.
 
 .. figure:: docs/DALL·E2023-02-19%2022.30.16.png
    :alt: Created with DALL·E, an AI system by OpenAI
+   :width: 200px
 
 -  Free software: MIT license
 -  Documentation: https://parrot-gpt.readthedocs.io.
