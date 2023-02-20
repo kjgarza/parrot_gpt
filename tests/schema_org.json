@@ -1,0 +1,46 @@
+{
+  "@context": "http://schema.org",
+  "@type": "ScholarlyArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://onlinelibrary.wiley.com/doi/10.1002/ejic.201900339"
+  },
+  "headline": "Oxido‐Hydroxido‐ and Oxido‐Aminato‐Osmium(V) Complexes with a Cyclohexanediamine‐Based Tetradentate Ligand as Active Oxidants for Dihydroxylation and Aminohydroxylation of Alkenes",
+  "description": "Abstract text goes here.",
+  "author": {
+    "@type": "Person",
+    "name": "Tomohiro Fujimoto",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Department of Material and Life Science Division of Advanced Science and Biotechnology Graduate School of Engineering Osaka University 2‐1 Yamadaoka 565‐0871 Suita, Osaka Japan"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wiley"
+  },
+  "datePublished": "2019-06-12",
+  "dateModified": "2019-06-12",
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "European Journal of Inorganic Chemistry",
+    "issn": [
+      "1434-1948",
+      "1099-0682"
+    ],
+    "volumeNumber": "2019",
+    "issueNumber": "24"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "DOI",
+    "value": "10.1002/ejic.201900339"
+  },
+  "keywords": "Eur. J. Inorg. Chem., chemistry, inorganic, Osmium, alkenes",
+  "funder": {
+    "@type": "Organization",
+    "name": "Japan Science and Technology Agency",
+    "identifier": "https://doi.org/10.13039/501100002241",
+    "grantNumber": "JPMJCR16P1"
+  }
+}

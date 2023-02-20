@@ -1,0 +1,114 @@
+ <doi_records>
+  <doi_record owner="10.1002" timestamp="2021-11-25 02:23:49">
+    <crossref>
+      <journal>
+        <journal_metadata language="en">
+          <full_title>European Journal of Inorganic Chemistry</full_title>
+          <abbrev_title>Eur. J. Inorg. Chem.</abbrev_title>
+          <issn media_type="print">1434-1948</issn>
+          <issn media_type="electronic">1099-0682</issn>
+        </journal_metadata>
+        <journal_issue>
+          <publication_date media_type="print">
+            <month>06</month>
+            <day>30</day>
+            <year>2019</year>
+          </publication_date>
+          <journal_volume>
+            <volume>2019</volume>
+          </journal_volume>
+          <issue>24</issue>
+          <doi_data>
+            <doi>10.1002/ejic.v2019.24</doi>
+            <resource>https://onlinelibrary.wiley.com/toc/10990682c/2019/24</resource>
+          </doi_data>
+        </journal_issue>
+        <journal_article publication_type="full_text">
+          <titles>
+            <title>Oxido‐Hydroxido‐ and Oxido‐Aminato‐Osmium(V) Complexes with a Cyclohexanediamine‐Based Tetradentate Ligand as Active Oxidants for Dihydroxylation and Aminohydroxylation of Alkenes</title>
+          </titles>
+          <contributors>
+            <person_name contributor_role="author" sequence="first">
+              <given_name>Tomohiro</given_name>
+              <surname>Fujimoto</surname>
+              <affiliation>Department of Material and Life Science Division of Advanced Science and Biotechnology Graduate School of Engineering Osaka University 2‐1 Yamadaoka 565‐0871 Suita, Osaka Japan</affiliation>
+            </person_name>
+          </contributors>
+          <publication_date media_type="online">
+            <month>06</month>
+            <day>12</day>
+            <year>2019</year>
+          </publication_date>
+          <publication_date media_type="print">
+            <month>06</month>
+            <day>30</day>
+            <year>2019</year>
+          </publication_date>
+          <pages>
+            <first_page>2891</first_page>
+            <last_page>2898</last_page>
+          </pages>
+          <publisher_item>
+            <identifier id_type="doi">10.1002/ejic.201900339</identifier>
+          </publisher_item>
+          <crossmark>
+            <crossmark_version>2</crossmark_version>
+            <crossmark_policy>10.1002/crossmark_policy</crossmark_policy>
+            <crossmark_domains>
+              <crossmark_domain>
+                <domain>onlinelibrary.wiley.com</domain>
+              </crossmark_domain>
+            </crossmark_domains>
+            <crossmark_domain_exclusive>true</crossmark_domain_exclusive>
+            <custom_metadata>
+              <assertion group_label="Publication History" group_name="publication_history" label="Received" name="received" order="0">2019-03-27</assertion>
+              <assertion group_label="Publication History" group_name="publication_history" label="Published" name="published" order="2">2019-06-12</assertion>
+              <program name="fundref">
+                <assertion name="fundgroup">
+                  <assertion name="funder_name">
+Japan Science and Technology Agency
+                    <assertion name="funder_identifier">https://doi.org/10.13039/501100002241</assertion>
+                  </assertion>
+                  <assertion name="award_number">JPMJCR16P1</assertion>
+                </assertion>
+              </program>
+              <program name="AccessIndicators">
+                <license_ref applies_to="am" start_date="2020-05-27">http://onlinelibrary.wiley.com/termsAndConditions#am</license_ref>
+                <license_ref applies_to="vor" start_date="2019-06-12">http://onlinelibrary.wiley.com/termsAndConditions#vor</license_ref>
+                <license_ref applies_to="tdm">http://doi.wiley.com/10.1002/tdm_license_1.1</license_ref>
+              </program>
+            </custom_metadata>
+          </crossmark>
+          <archive_locations>
+            <archive name="Portico"/>
+          </archive_locations>
+          <doi_data>
+            <doi>10.1002/ejic.201900339</doi>
+            <resource>https://onlinelibrary.wiley.com/doi/10.1002/ejic.201900339</resource>
+            <collection property="crawler-based">
+              <item crawler="iParadigms">
+                <resource>https://onlinelibrary.wiley.com/doi/pdf/10.1002/ejic.201900339</resource>
+              </item>
+            </collection>
+            <collection property="syndication">
+              <item>
+                <resource content_version="am" mime_type="application/pdf">https://onlinelibrary.wiley.com/doi/am-pdf/10.1002/ejic.201900339</resource>
+              </item>
+            </collection>
+            <collection property="text-mining">
+              <item>
+                <resource content_version="vor" mime_type="application/pdf">https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fejic.201900339</resource>
+              </item>
+              <item>
+                <resource mime_type="application/pdf">https://onlinelibrary.wiley.com/doi/pdf/10.1002/ejic.201900339</resource>
+              </item>
+              <item>
+                <resource mime_type="application/xml">https://onlinelibrary.wiley.com/doi/full-xml/10.1002/ejic.201900339</resource>
+              </item>
+            </collection>
+          </doi_data>
+        </journal_article>
+      </journal>
+    </crossref>
+  </doi_record>
+</doi_records>
