@@ -2,7 +2,7 @@ import os
 import openai
 import logger
 import json
-from parrot_gpt.prompts import EXAMPLES, schema_prompt
+from parrot_gpt.prompts import EXAMPLES, schema_prompt, enrich_prompt, peerreview_prompt
 from parrot_gpt.exceptions import EmptyMetadataError, UnsupportedSchemaStandard
 
 class ParrotGpt:
@@ -25,6 +25,8 @@ class ParrotGpt:
         # Use the OpenAI API to transform metadata to the target schema
         # Return the transformed metadata
 
+        metadata = self.serialize(metadata, initial_schema, target_schema)
+
         prompt = schema_prompt.format(
             metadata = metadata,
             target_schema= target_schema,
@@ -40,9 +42,45 @@ class ParrotGpt:
             return {}
 
         return response.choices[0].text
+    
+    def _enrich_metadata(self, metadata):
+
+        metadata = self.serialize(metadata)
+
+        prompt = enrich_prompt.format(
+            metadata = metadata,
+            metadata_example=EXAMPLES['metadata'],
+            result_example=EXAMPLES['result_dc'],
+        )
+
+        try:
+            response = openai.Completion.create(**self.model_params, prompt=prompt)
+        except Exception as e:
+            print(e)
+            return {}
+
+        return response.choices[0].text
+    
+
+    def _peerreview_article(self, article, venue):
+
+        article = self.serialize(article)
+
+        prompt = peerreview_prompt.format(
+            article = article,
+            venue = venue,
+        )
+
+        try:
+            response = openai.Completion.create(**self.model_params, prompt=prompt)
+        except Exception as e:
+            print(e)
+            return {}
+
+        return response.choices[0].text
 
 
-    def serialize(self, metadata_file, initial_schema, target_schema):
+    def serialize(self, metadata_file, initial_schema=None, target_schema=None):
       
         if metadata_file is None:
             raise EmptyMetadataError("metadata_file cannot be empty for schema generation request!")
@@ -53,9 +91,10 @@ class ParrotGpt:
         with open(metadata_file, 'r') as f:
             metadata = f.read()
 
-        if len(metadata) > 2000:
+        if len(metadata) > 2500:
             raise Exception("Metadata file is too large and it would require too many tokens. Please use a smaller file.")
 
-        return self._transform_metadata(metadata, initial_schema, target_schema)
+        return metadata
+        # return self._transform_metadata(metadata, initial_schema, target_schema)
         
 
