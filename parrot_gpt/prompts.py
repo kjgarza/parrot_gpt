@@ -210,7 +210,7 @@ Japan Science and Technology Agency
   }
 }
 </script>
-"""
+""".strip()
     )
 }
 
@@ -240,7 +240,7 @@ peerreview_prompt = (
 
     Review:
     
-    """
+    """.strip()
 )
 
 schema_prompt = (
@@ -252,7 +252,7 @@ schema_prompt = (
       {metadata}
     ```
     
-    """
+    """.strip()
 )
 
 enrich_prompt = (
@@ -269,7 +269,7 @@ enrich_prompt = (
     ```
       {metadata}
     ```
-    """
+    """.strip()
 )
 
 schema_fair_prompt = (
@@ -281,7 +281,7 @@ schema_fair_prompt = (
     target schema: {target_schema}
     metadata file: a
     {metadata}
-    converted metadata file:"""
+    converted metadata file:""".strip()
 )
 
 schema_examples_prompt = (
@@ -300,5 +300,5 @@ schema_examples_prompt = (
     target schema: {target_schema}
     metadata file: 
     {metadata}
-    converted metadata file:"""
+    converted metadata file:""".strip()
 )
