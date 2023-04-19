@@ -1,0 +1,88 @@
+
+    Converted metadata file:
+    ```
+    {
+  "@context": {
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dc": "http://purl.org/dc/terms/",
+    "dct": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcat:distribution": {
+      "@type": "@id"
+    },
+    "dcat:mediaType": {
+      "@type": "xsd:string"
+    },
+    "dcat:byteSize": {
+      "@type": "xsd:integer"
+    },
+    "dcat:accessLevel": {
+      "@type": "xsd:string"
+    },
+    "dcat:accessLevelURI": {
+      "@type": "@id"
+    },
+    "dcat:checksum": {
+      "@type": "xsd:string"
+    },
+    "dcat:checksumAlgorithm": {
+      "@type": "@id"
+    }
+  },
+  "@type": "dcat:Dataset",
+  "dc:identifier": {
+    "@type": "dct:Identifier",
+    "dct:identifier": "10.7969/4VS4-MK10",
+    "dct:identifierType": "DOI"
+  },
+  "dc:creator": {
+    "@type": "dcat:Person",
+    "dcat:name": "Kenkenberg, Alexander",
+    "dcat:givenName": "Alexander",
+    "dcat:familyName": "Kenkenberg",
+    "dcat:nameIdentifier": {
+      "@type": "dct:Identifier",
+      "dct:identifier": "https://orcid.org/0000-0001-5552-6921",
+      "dct:identifierType": "ORCID",
+      "dct:schemeURI": "https://orcid.org"
+    }
+  },
+  "dc:title": {
+    "@type": "dct:title",
+    "@value": "Real-time Volumetric Cloud Visualization of Meteorological Simulation Data",
+    "@language": "en"
+  },
+  "dc:publisher": {
+    "@type": "dcat:Organization",
+    "dcat:name": "LMU München",
+    "dcat:publisherIdentifier": {
+      "@type": "dct:Identifier",
+      "dct:identifier": "https://ror.org/05591te55",
+      "dct:identifierType": "ROR",
+      "dct:schemeURI": "https://ror.org/"
+    }
+  },
+  "dc:publicationYear": {
+    "@type": "dct:date",
+    "@value": "2022"
+  },
+  "dc:subject": {
+    "@type": "dcat:Keyword",
+    "dcat:subjectScheme": "Fields of Science and Technology (FOS)",
+    "dcat:schemeURI": "http://www.oecd.org/science/inno",
+    "dcat:valueURI": "http://www.oecd.org/science/inno/38235147.pdf",
+    "@value": "FOS: Computer and information sciences"
+  },
+  "dc:language": {
+    "@type": "dct:language",
+    "@value": "en"
+  },
+  "dc:size": {
+    "@type": "dct:size",
+    "@value": "40 GB"
+  },
+  "dc:format": {
+    "@type": "dct:format",
+    "@value": "application/zip"
+  },
+  "dc
