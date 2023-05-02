@@ -1,0 +1,21 @@
+| DataCite XML Schema | DCAT RDF Schema |
+|---------------------|----------------|
+| identifier          | dcat:identifier |
+| creators             | dcat:creator |
+| titles                 | dcat:title |
+| publisher          | dcat:publisher |
+| publicationYear| dcat:issued |
+| subjects            | dcat:keyword |
+| contributors     | dcat:contributor |
+| dates                  | dcat:temporal |
+| language            | dcat:language |
+| resourceType    | dcat:theme |
+| alternateIdentifiers | dcat:identifier |
+| relatedIdentifiers    | dcat:relation |
+| descriptions        | dcat:description |
+| locations            | dcat:spatial |
+| version              | dcat:version |
+| formats                | dcat:mediaType |
+| fundingReferences | dcat:funder | 
+
+Note: This table only shows a partial crosswalk between the two metadata schemas. The complete crosswalk may also include additional fields and mappings that are not detailed in the table.
