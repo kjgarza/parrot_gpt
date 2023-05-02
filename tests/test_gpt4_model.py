@@ -10,12 +10,12 @@ class TestGPT4Model(unittest.TestCase):
     def test_gpt4_model_inherits_model_interface(self):
         self.assertIsInstance(self.gpt4_model, ModelInterface)
 
-    @patch("models.gpt4_model.openai.GPT4")
+    @patch("model_interface.gpt4_model.openai.GPT4")
     def test_get_model(self, mock_gpt4):
         self.gpt4_model.get_model()
         mock_gpt4.from_pretrained.assert_called_once_with("openai-gpt4")
 
-    @patch("models.gpt4_model.openai.GPT4Tokenizer")
+    @patch("model_interface.gpt4_model.openai.GPT4Tokenizer")
     def test_get_tokenizer(self, mock_gpt4_tokenizer):
         self.gpt4_model.get_tokenizer()
         mock_gpt4_tokenizer.from_pretrained.assert_called_once_with("openai-gpt4")
