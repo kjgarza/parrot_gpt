@@ -3,68 +3,228 @@ Parrot GPT
 
 |PyPI version| |Build Status| |Documentation Status| |Updates|
 
-The Parrot-GPT package provides a Python library that can convert any
-bibliographic metadata between different schemas using the OpenAI Large
-language models via its API. There is no limitation in the schemas that
-can be transformed but currently there a restriction has been included
-to input and output schemas.
+Parrot GPT is a Python library that enables you to convert bibliographic
+metadata between various schemas using OpenAI’s large language models
+through its API. The library is not limited to specific schemas, but
+currently, some restrictions apply to input and output schemas.
 
 .. figure:: docs/DALL·E2023-02-19%2022.30.16.png
-   :alt: Created with DALL·E, an AI system by OpenAI
-   :width: 200px
+   :alt: Parrot GPT logo
 
--  Free software: MIT license
--  Documentation: https://parrot-gpt.readthedocs.io.
+   Parrot GPT logo
+
+-  License: MIT
+-  Documentation: https://parrot-gpt.readthedocs.io
 
 Metadata Formats
 ----------------
 
-============= =======
-Schema        Example
-============= =======
-DATS          -
-cff           -
-crossref_xml  -
-JATS          -
-BioSchema     -
-Codemeta      -
-RIF-CS        -
-EDMI          -
-DCAT          -
-DCAT-AP       -
-DataCite      -
-DataCite-XML  -
-DataCite-JSON -
-Crossref      -
-schema.org    -
-bibtex        -
-DC-XML        -
-DC-JSON       -
-Dublin Core   -
-============= =======
+The following table shows some examples of metadata formats supported by
+Parrot GPT:
+
++---------------+
+| Schema        |
++===============+
+| DATS          |
++---------------+
+| cff           |
++---------------+
+| crossref_xml  |
++---------------+
+| JATS          |
++---------------+
+| BioSchema     |
++---------------+
+| Codemeta      |
++---------------+
+| RIF-CS        |
++---------------+
+| EDMI          |
++---------------+
+| DCAT          |
++---------------+
+| DCAT-AP       |
++---------------+
+| DataCite      |
++---------------+
+| DataCite-XML  |
++---------------+
+| DataCite-JSON |
++---------------+
+| Crossref      |
++---------------+
+| schema.org    |
++---------------+
+| bibtex        |
++---------------+
+| DC-XML        |
++---------------+
+| DC-JSON       |
++---------------+
+| Dublin Core   |
++---------------+
 
 Installation
 ------------
 
-You can install ``parrot_gpt`` with ``pip``:
+Install ``parrot_gpt`` using ``pip``:
 
-::
+.. code:: bash
 
    $ pip install parrot_gpt
 
-Usage from the command line
----------------------------
+Usage
+-----
 
-.. code:: sh
+Command Line
+~~~~~~~~~~~~
 
-       $ export OPENAI_API_KEY={OPENAI_API_KEY}
-       $ parrot_gpt.cli -mf ./path/to/your/filename -i crosssref -t datacite > output
+Use the cli.py script to transform metadata using a selected large language model and prompt type:
+
+.. code:: bash
+   $ python cli.py --model MODEL --prompt-type PROMPT_TYPE --input-file INPUT_FILE --output-file OUTPUT_FILE [OPTIONS]
+
+
+Where:
+
+- MODEL is the large language model to use (e.g., turbo, gpt3)
+- PROMPT_TYPE is the type of input prompt (e.g., enrich, translate, crosswalk, peer_review)
+- INPUT_FILE is the input metadata file
+- OUTPUT_FILE is the output metadata file
+- OPTIONS are optional arguments, such as --initial_schema, --target_schema, and --venue (for peer review)
+
+For example:
+.. code:: bash
+   $ export OPENAI_API_KEY={OPENAI_API_KEY}
+   $ python cli.py --model gpt3 --prompt-type translate --input-file input.xml --output-file output.json --initial_schema crossref --target_schema datacite
+
+
+Python API
+~~~~~~~~~~
+
+You can also use Parrot GPT in your Python code:
+
+.. code:: python
+
+   import parrot_gpt
+
+   model = "gpt3"
+   prompt_type = "translate"
+   input_file = "path/to/your/input_file"
+   output_file = "path/to/your/output_file"
+   initial_schema = "crossref"
+   target_schema = "datacite"
+
+   parrot = ParrotGptCLI(model=model, prompt_type=prompt_type, input_file=input_file, output_file=output_file, initial_schema=initial_schema, target_schema=target_schema)
+   parrot.run()
+
+Models and Prompts
+------------
+
+The following large language models are supported:
+
+- turbo: GPT-3.5 Model
+- gpt3: GPT-3 Model
+
+The following prompt types are supported:
+
+- enrich: Enriches the metadata
+- translate: Translates the metadata to another schema
+- crosswalk: Generates a crosswalk between two schemas
+- peer_review: Generates a peer review report for the input file
+
+
+Contributing
+------------
+
+Contributions are welcome! Please check the
+`issues <https://github.com/kjgarza/parrot_gpt/issues>`__ page for any
+existing discussions, or create a new one if you have any suggestions or
+ideas.
+
+License
+-------
+
+This project is licensed under the MIT License. See the
+`LICENSE <LICENSE>`__ file for details.
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/parrot_gpt.svg
-   :target: https://pypi.python.org/pypi/parrot_gpt
 .. |Build Status| image:: https://img.shields.io/travis/kjgarza/parrot_gpt.svg
-   :target: https://travis-ci.com/kjgarza/parrot_gpt
 .. |Documentation Status| image:: https://readthedocs.org/projects/parrot-gpt/badge/?version=latest
-   :target: https://parrot-gpt.readthedocs.io/en/latest/?version=latest
 .. |Updates| image:: https://pyup.io/repos/github/kjgarza/parrot_gpt/shield.svg
-   :target: https://pyup.io/repos/github/kjgarza/parrot_gpt/
+
+
+
+Parrot GPT CLI
+
+Parrot GPT CLI is a command-line interface for the Parrot GPT library, allowing users to transform metadata using various large language models and prompt types.
+
+Installation
+
+First, install the parrot_gpt package if you haven't already:
+
+$ pip install parrot_gpt
+
+
+Then, clone this repository and install the required dependencies:
+
+$ git clone https://github.com/yourusername/parrot_gpt_cli.git
+$ cd parrot_gpt_cli
+$ pip install -r requirements.txt
+
+Usage
+Command Line
+
+Use the cli.py script to transform metadata using a selected large language model and prompt type:
+
+$ python cli.py --model MODEL --prompt-type PROMPT_TYPE --input-file INPUT_FILE --output-file OUTPUT_FILE [OPTIONS]
+
+
+Where:
+
+MODEL is the large language model to use (e.g., turbo, gpt3)
+PROMPT_TYPE is the type of input prompt (e.g., enrich, translate, crosswalk, peer_review)
+INPUT_FILE is the input metadata file
+OUTPUT_FILE is the output metadata file
+OPTIONS are optional arguments, such as --initial_schema, --target_schema, and --venue (for peer review)
+
+For example:
+
+$ python cli.py --model gpt3 --prompt-type translate --input-file input.xml --output-file output.json --initial_schema crossref --target_schema datacite
+
+Python API
+
+You can also use the Parrot GPT CLI in your Python code:
+
+from cli import ParrotGptCLI
+
+model = "gpt3"
+prompt_type = "translate"
+input_file = "path/to/your/input_file"
+output_file = "path/to/your/output_file"
+initial_schema = "crossref"
+target_schema = "datacite"
+
+cli = ParrotGptCLI(model=model, prompt_type=prompt_type, input_file=input_file, output_file=output_file, initial_schema=initial_schema, target_schema=target_schema)
+cli.run()
+
+Models and Prompts
+
+The following large language models are supported:
+
+turbo: GPT-4 Model
+gpt3: GPT-3 Model
+
+The following prompt types are supported:
+
+enrich: Enriches the metadata
+translate: Translates the metadata to another schema
+crosswalk: Generates a crosswalk between two schemas
+peer_review: Generates a peer review report for the input file
+Contributing
+
+Contributions are welcome! Please check the issues page for any existing discussions, or create a new one if you have any suggestions or ideas.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
