@@ -1,37 +1,46 @@
 import argparse
-import sys
-import parrot_gpt
+from parrot_gpt import ParrotGpt
+from parrot_gpt.model_interface import GPT4Model, GPT3Model
+
+
+MODEL_MAPPING = {
+    "turbo": GPT4Model(),
+    "gpt3": GPT3Model(),
+    # Add other models here as needed
+}
+
+PROMPT_MAPPING = {
+    "enrich": "Enriches the metadata",
+    "translate": "Translates the metadata to another schema",
+    "crosswalk": "Generates a crosswalk between two schemas",
+    "peer_review": "Generates a peer review report for the input file",
+}
 
 def main():
-    """Console script for parrot_gpt."""
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument('-mf','--metadata_file', type=str, help='metadata file to be converted')
-    parser.add_argument('-a','--article_file', type=str, help='article file to be peer reviewed')
-    parser.add_argument('-v','--venue', type=str, help='venue to be peer reviewed')
+    parser = argparse.ArgumentParser(description="Transform metadata using a selected large language model and prompt type.")
+    parser.add_argument("--model", default="gpt3", choices=MODEL_MAPPING.keys(), required=True, help="The large language model to use.")
+    parser.add_argument("--prompt-type", choices=PROMPT_MAPPING.keys(), required=True, help="The type of input prompt.")
+    parser.add_argument("--input-file", required=True, help="The input metadata file.")
+    parser.add_argument("--output-file", required=True, help="The output metadata file.")
     parser.add_argument('-i','--initial_schema', type=str, help='initial schema to convert to')
     parser.add_argument('-t','--target_schema', type=str, help='target schema to convert to')
-    parser.add_argument('-e','--enrich', action='store_true', help='enrich metadata')
-    parser.add_argument('-f', '--fair', action='store_true', help='generate fair metadata')
-    parser.add_argument('-pr', '--peer-review', action='store_true', help='generate peer review of an article')
-    parser.add_argument('-ex', '--examples', action='store_true', help='include examples of metadata')
+    parser.add_argument('-v','--venue', type=str, help='venue to be peer reviewed')
+
 
     args = parser.parse_args()
 
-    if args.enrich:
-        response = parrot_gpt.ParrotGpt()._enrich_metadata(args.metadata_file)
-    elif args.fair:
-        response = parrot_gpt.ParrotGpt().fair_metadata(args.metadata_file)
-    elif args.peer_review:
-        response = parrot_gpt.ParrotGpt()._peerreview_article(args.article_file, args.venue)
-    elif args.examples:
-        response = parrot_gpt.ParrotGpt().examples(args.metadata_file)
-    else:
-        response = parrot_gpt.ParrotGpt()._transform_metadata(args.metadata_file, args.initial_schema, args.target_schema)
+    model = MODEL_MAPPING[args.model]
+    parrot_gpt = ParrotGpt(model)
 
-    # response = parrot_gpt.ParrotGpt().serialize(args.metadata_file, args.initial_schema, args.target_schema)
-    print(response)
-    return 0
+    with open(args.input_file, "r") as input_file:
+        input_metadata = input_file.read()
+    if len(input_metadata) > 2500:
+        raise Exception("Metadata file is too large and it would require too many tokens. Please use a smaller file.")
+
+    transformed_metadata = parrot_gpt.serialize(input_metadata, args)
+    print(transformed_metadata)
+    with open(args.output_file, "w") as output_file:
+        output_file.write(transformed_metadata)
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
