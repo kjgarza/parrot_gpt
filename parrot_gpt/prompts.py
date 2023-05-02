@@ -214,7 +214,7 @@ Japan Science and Technology Agency
     )
 }
 
-peerreview_prompt = (
+peer_review_prompt = (
     """I want you to act as a Peer Reviewer for the {journal}. 
     You will be given the full text of an article and you will be expected to  write a clear and constructive review. 
     While drafting the review consider the questions below. 
@@ -242,6 +242,8 @@ peerreview_prompt = (
     
     """.strip()
 )
+
+schema_system_prompt = "You are an expert on metadata mapping. You will be given a metadata file and a schema. You will be expected to map the metadata file to the schema. Finally emit a response of the mapped metadata file."
 
 schema_prompt = (
     """You are given the initial metadata file using {initial_schema} schema. 
@@ -272,7 +274,7 @@ enrich_prompt = (
     """.strip()
 )
 
-schema_fair_prompt = (
+fair_prompt = (
     """You are given the initial metadata file using {initial_schema} schema and a prompt. 
     Convert the metadata file using information from the metadata file to the {target_schema} schema.
     Include the FAIR data recommendations in the converted metadata file.
@@ -282,6 +284,14 @@ schema_fair_prompt = (
     metadata file: a
     {metadata}
     converted metadata file:""".strip()
+)
+
+crosswalk_system_prompt = "You are an expert on crosswalks. You will generate the crosswalk between different metadata schemas."
+
+crosswalk_prompt = (
+    """Generate the crosswalk between  {initial_schema} schema {target_schema} schema.
+        Write the output in a table format.
+    """.strip()
 )
 
 schema_examples_prompt = (
