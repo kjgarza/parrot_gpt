@@ -83,7 +83,7 @@ class GPT3Model(ModelInterface):
 
     def transform_prompt(self, prompt):
         try:
-            response = self.openai.Completion.create(**self.model_params, prompt=prompt.user)
+            response = self.openai.Completion.create(**self.model_params, prompt=prompt["user"])
         except Exception as e:
             print(e)
             return {}
