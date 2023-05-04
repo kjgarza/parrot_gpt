@@ -79,13 +79,8 @@ Usage
 Command Line
 ~~~~~~~~~~~~
 
-Use the cli.py script to transform metadata using a selected large language model and prompt type:
+Use the cli.py script to transform metadata using a selected large language model and prompt type. Where:
 
-.. code:: bash
-   $ python cli.py --model MODEL --prompt-type PROMPT_TYPE --input-file INPUT_FILE --output-file OUTPUT_FILE [OPTIONS]
-
-
-Where:
 
 - MODEL is the large language model to use (e.g., turbo, gpt3)
 - PROMPT_TYPE is the type of input prompt (e.g., enrich, translate, crosswalk, peer_review)
@@ -96,7 +91,8 @@ Where:
 For example:
 .. code:: bash
    $ export OPENAI_API_KEY={OPENAI_API_KEY}
-   $ python cli.py --model gpt3 --prompt-type translate --input-file input.xml --output-file output.json --initial_schema crossref --target_schema datacite
+   $
+   $ python -m parrot_gpt.cli --model gpt3 --prompt-type translate --input-file input.xml --output-file output.json --initial_schema crossref --target_schema datacite
 
 
 Python API
@@ -106,17 +102,20 @@ You can also use Parrot GPT in your Python code:
 
 .. code:: python
 
-   import parrot_gpt
+   from parrot_gpt import ParrotGpt
+   from parrot_gpt.model_interface import GPT3Model
+   from collections import namedtuple
 
-   model = "gpt3"
-   prompt_type = "translate"
-   input_file = "path/to/your/input_file"
-   output_file = "path/to/your/output_file"
-   initial_schema = "crossref"
-   target_schema = "datacite"
+   Arguments = namedtuple('Arguments', 'prompt_type initial_schema target_schema')
+   args = Arguments(prompt_type="translate", initial_schema="crossref", target_schema="datacite")
+   input_metadata= "path/to/your/input_file"
 
-   parrot = ParrotGptCLI(model=model, prompt_type=prompt_type, input_file=input_file, output_file=output_file, initial_schema=initial_schema, target_schema=target_schema)
-   parrot.run()
+   parrot_gpt = ParrotGpt(GPT3Model())
+   output = parrot_gpt.serialize(input_metadata, args)
+   print(output)
+
+
+
 
 Models and Prompts
 ------------
@@ -128,11 +127,10 @@ The following large language models are supported:
 
 The following prompt types are supported:
 
-- enrich: Enriches the metadata
-- translate: Translates the metadata to another schema
+- enrich: Enriches the input metadata file
+- translate: Translates the metadata file to another schema
 - crosswalk: Generates a crosswalk between two schemas
 - peer_review: Generates a peer review report for the input file
-
 
 Contributing
 ------------
