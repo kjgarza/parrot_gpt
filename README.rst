@@ -90,6 +90,7 @@ Use the cli.py script to transform metadata using a selected large language mode
 
 For example:
 .. code:: bash
+   
    $ export OPENAI_API_KEY={OPENAI_API_KEY}
    $
    $ python -m parrot_gpt.cli --model gpt3 --prompt-type translate --input-file input.xml --output-file output.json --initial_schema crossref --target_schema datacite
