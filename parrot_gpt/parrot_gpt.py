@@ -1,7 +1,3 @@
-import os
-import openai
-import logger
-import json
 from parrot_gpt.model_interface import *
 from parrot_gpt.prompts import *
 from parrot_gpt.exceptions import EmptyMetadataError, UnsupportedSchemaStandard
