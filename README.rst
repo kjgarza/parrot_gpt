@@ -89,7 +89,8 @@ Use the cli.py script to transform metadata using a selected large language mode
 - OPTIONS are optional arguments, such as --initial_schema, --target_schema, and --venue (for peer review)
 
 For example:
-.. code:: bash
+
+.. code:: shell
    
    $ export OPENAI_API_KEY={OPENAI_API_KEY}
    $
