@@ -1,0 +1,36 @@
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dct="http://purl.org/dc/terms/" xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	<dcat:Dataset rdf:about="10.7969/4VS4-MK10">
+		<dct:title xml:lang="en">Real-time Volumetric Cloud Visualization of Meteorological Simulation Data</dct:title>
+		<dct:publisher>
+			<foaf:Organization>
+				<dct:title>LMU München</dct:title>
+				<foaf:homepage rdf:resource="https://ror.org/05591te55"/>
+			</foaf:Organization>
+		</dct:publisher>
+		<dct:creator>
+			<foaf:Person>
+				<foaf:name>Kenkenberg, Alexander</foaf:name>
+				<foaf:givenName>Alexander</foaf:givenName>
+				<foaf:familyName>Kenkenberg</foaf:familyName>
+				<foaf:homepage rdf:resource="https://orcid.org/0000-0001-5552-6921"/>
+			</foaf:Person>
+		</dct:creator>
+		<dct:issued>2022</dct:issued>
+		<dct:language>en</dct:language>
+		<dct:rights rdf:resource="https://creativecommons.org/licenses/by/4.0/legalcode"/>
+		<dct:subject rdf:resource="http://www.oecd.org/science/inno/38235147.pdf"/>
+		<dcat:distribution>
+			<dcat:Distribution>
+				<dcat:accessURL rdf:resource="https://example.org/archive.zip"/>
+				<dcat:byteSize>40000000000</dcat:byteSize>
+				<dcat:mediaType>application/zip</dcat:mediaType>
+				<dcat:checksum>d41d8cd98f00b204e9800998ecf8427e</dcat:checksum>
+				<dcat:accessLevel rdf:resource="http://purl.org/coar/access_right/c_abf2"/>
+			</dcat:Distribution>
+		</dcat:distribution>
+		<dct:abstract xml:lang="en">This archive contains a cyclone simulation as png/csv files and as Unreal Engine 4.27 assets.</dct:abstract>
+		<dct:type rdf:resource="http://www.oecd.org/science/inno/38235147.pdf"/>
+		<dcat:byteSize>40 GB</dcat:byteSize>
+	</dcat:Dataset>
+</rdf:RDF>

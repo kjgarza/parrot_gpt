@@ -1,0 +1,48 @@
+
+Improved metadata file:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<resource
+    xmlns="http://datacite.org/schema/kernel-4"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.4/metadata.xsd">
+    <identifier identifierType="DOI">10.6084/M9.FIGSHARE.7806548</identifier>
+    <creators>
+        <creator>
+            <creatorName>Evangelos Pournaras</creatorName>
+            <givenName>Evangelos</givenName>
+            <familyName>Pournaras</familyName>
+            <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">0000-0003-3900-2057</nameIdentifier>
+            <affiliation>EPOS-net</affiliation>
+        </creator>
+    </creators>
+    <titles>
+        <title>Agent-based Planning Portfolio</title>
+    </titles>
+    <descriptions>
+        <description descriptionType="Abstract">&lt;p&gt;This dataset contains a portfolio of different datasets with generated plans for agents that represent multiple options to choose from. The following datasets are included so far:&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;1. Synthetic&lt;/p&gt;
+&lt;p&gt;2. Residential energy consumption&lt;/p&gt;
+&lt;p&gt;3. Bike sharing&lt;/p&gt;
+&lt;p&gt;4. Charging control of electric vehicles&lt;/p&gt;
+&lt;p&gt;5. Fog computing load-balancing&lt;/p&gt;
+&lt;p&gt;6. Home appliances peak-shaving&lt;/p&gt;
+&lt;p&gt;7. Data collectives&lt;/p&gt;
+&lt;p&gt;8. Drones Swarm Sensing&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;These portfolio of agent plans has been used to study the collective learning algorithm of EPOS, the Economic Planning and Optimized Selections: http://epos-net.org&lt;/p&gt;</description>
+    </descriptions>
+    <subjects>
+        <subject subjectScheme="LCSH" schemeURI="http://id.loc.gov/authorities/subjects.html">Distributed computing and systems software not elsewhere classified</subject>
+        <subject subjectScheme="LCSH" schemeURI="http://id.loc.gov/authorities/subjects.html">Knowledge representation and reasoning</subject>
+        <subject subjectScheme="LCSH" schemeURI="http://id.loc.gov/authorities/subjects.html">Optimisation</subject>
+        <subject subjectScheme="LCSH" schemeURI="http://id.loc.gov/authorities/subjects.html">Dynamical systems in applications</subject>
+    </subjects>
+    <publisher>figshare</publisher>
+    <publicationYear>2023</publicationYear>
+    <dates>
+        <date dateType="Created">2023-03-26</date>
+        <date dateType="Updated">2023-03-26</date>
+    </dates>
+    <resourceType resourceTypeGeneral="Dataset">Dataset</resourceType>
+    <

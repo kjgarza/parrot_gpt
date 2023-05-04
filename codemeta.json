@@ -1,0 +1,25 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Parrot GPT",
+  "description": "A Python library for converting bibliographic metadata between different schemas using the OpenAI Large language models via its API.",
+  "license": "https://opensource.org/licenses/MIT",
+  "codeRepository": "https://github.com/kjgarza/parrot_gpt",
+  "issueTracker": "https://github.com/kjgarza/parrot_gpt/issues",
+  "programmingLanguage": "Python",
+  "url": "https://parrot-gpt.readthedocs.io",
+  "author": {
+    "@type": "Person",
+    "name": "Kristian Garza",
+    "email": "kj.garza@gmail.com"
+  },
+  "version": "0.2.0",
+  "keywords": [
+    "metadata",
+    "bibliographic",
+    "conversion",
+    "GPT",
+    "OpenAI",
+    "API"
+  ]
+}

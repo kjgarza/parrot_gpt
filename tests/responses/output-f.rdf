@@ -1,0 +1,19 @@
+| dataCite-xMl schema | DCAT-rdf schema |
+| --- | --- |
+| creator | dcterms:creator |
+| publisher | dcterms:publisher |
+| publicationYear | dcterms:issued |
+| title | dcterms:title |
+| resourceType | dcterms:type |
+| identifier | dcterms:identifier |
+| description | dcterms:description |
+| version | dcterms:hasVersion |
+| language | dcterms:language |
+| alternateIdentifier | dcterms:alternative |
+| relatedIdentifier | dcterms:relation |
+| size | dcterms:extent |
+| format | dcterms:format |
+| rights | dcterms:rights |
+| subject | dcterms:subject | 
+
+Note: The dataCite-xMl `rights` field maps to the DCAT-rdf schema `dcterms:rights`, but the values should be transformed when moving between these schemas. DataCite-xMl uses a URI format for the rights field (e.g. http://creativecommons.org/licenses/by/4.0/), while DCAT-rdf uses a string format for the rights field (e.g. "Creative Commons Attribution 4.0 International License").

@@ -1,0 +1,37 @@
+
+
+Converted metadata file:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dct="http://purl.org/dc/terms/" xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<dcat:Dataset rdf:about="10.7969/4VS4-MK10">
+		<dct:title xml:lang="en">Real-time Volumetric Cloud Visualization of Meteorological Simulation Data</dct:title>
+		<dct:publisher>
+			<foaf:Organization>
+				<foaf:name>LMU München</foaf:name>
+				<dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ror.org/05591te55</dct:identifier>
+			</foaf:Organization>
+		</dct:publisher>
+		<dct:creator>
+			<foaf:Person>
+				<foaf:name>Kenkenberg, Alexander</foaf:name>
+				<foaf:givenName>Alexander</foaf:givenName>
+				<foaf:familyName>Kenkenberg</foaf:familyName>
+				<dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0001-5552-6921</dct:identifier>
+			</foaf:Person>
+		</dct:creator>
+		<dct:subject>
+			<dct:description rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oecd.org/science/inno/38235147.pdf</dct:description>
+			<dct:title>FOS: Computer and information sciences</dct:title>
+		</dct:subject>
+		<dct:language>en</dct:language>
+		<dct:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://creativecommons.org/licenses/by/4.0/legalcode</dct:rights>
+		<dct:description xml:lang="en">This archive contains a cyclone simulation as png/csv files and as Unreal Engine 4.27 assets.</dct:description>
+		<dcat:distribution>
+			<dcat:Distribution>
+				<dcat:mediaType>application/zip</dcat:mediaType>
+				<dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://example.org/archive.zip</dcat:accessURL>
+				<dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000000000</dcat:byteSize>
+				<dcat:checksum>
+					<dcat:Checksum>
+						

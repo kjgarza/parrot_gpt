@@ -1,0 +1,90 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/dcat.jsonld",
+    {
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "dct": "http://purl.org/dc/terms/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "schema": "http://schema.org/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "dc": "http://purl.org/dc/elements/1.1/"
+    }
+  ],
+  "@type": "Dataset",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "DOI",
+    "value": "10.7969/4VS4-MK10"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Kenkenberg, Alexander",
+    "givenName": "Alexander",
+    "familyName": "Kenkenberg",
+    "nameIdentifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ORCID",
+      "value": "https://orcid.org/0000-0001-5552-6921"
+    }
+  },
+  "title": {
+    "@language": "en",
+    "@value": "Real-time Volumetric Cloud Visualization of Meteorological Simulation Data"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "LMU München",
+    "publisherIdentifier": {
+      "@type": "PropertyValue",
+      "propertyID": "ROR",
+      "value": "https://ror.org/05591te55"
+    }
+  },
+  "publicationYear": {
+    "@type": "xsd:gYear",
+    "@value": 2022
+  },
+  "subject": {
+    "@type": "PropertyValue",
+    "propertyID": "Fields of Science and Technology (FOS)",
+    "value": "FOS: Computer and information sciences",
+    "valueURI": "http://www.oecd.org/science/inno/38235147.pdf"
+  },
+  "language": {
+    "@type": "xsd:language",
+    "@value": "en"
+  },
+  "size": {
+    "@type": "xsd:string",
+    "@value": "40 GB"
+  },
+  "format": {
+    "@type": "xsd:string",
+    "@value": "application/zip"
+  },
+  "rights": {
+    "@type": "xsd:string",
+    "@value": "Creative Commons Attribution 4.0 International"
+  },
+  "rightsURI": {
+    "@type": "xsd:anyURI",
+    "@value": "https://creativecommons.org/licenses/by/4.0/legalcode"
+  },
+  "description": {
+    "@language": "en",
+    "@value": "This archive contains a cyclone simulation as png/csv files and as Unreal Engine 4.27 assets."
+  },
+  "distribution": {
+    "@type": "DataDownload",
+    "mediaType": "application/zip",
+    "contentURL": {
+      "@type": "xsd:anyURI",
+      "@value": "https://example.org/archive.zip"
+    },
+    "checksum": {
+      "@type": "PropertyValue",
+      "propertyID": "MD5",
+      "value": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+  }
+}

@@ -210,33 +210,88 @@ Japan Science and Technology Agency
   }
 }
 </script>
-"""
+""".strip()
     )
 }
 
-schema_prompt = (
-    """You are given the initial metadata file using {initial_schema} schema and a prompt. 
-    Convert the metadata file using information from the metadata file to the {target_schema} schema.
+peer_review_prompt = (
+    """I want you to act as a Peer Reviewer for the {journal}. 
+    You will be given the full text of an article and you will be expected to  write a clear and constructive review. 
+    While drafting the review consider the questions below. 
+    Finally emit a response of the review.
 
-    initial schema: {initial_schema}
-    target schema: {target_schema}
+    - Is this research appropriate for the journal?
+    - Does the content have archival value?
+    - Is this research important to the field?
+    - Does the introduction clearly explain motivation?
+    - Is the manuscript clear and balanced?
+    - Is the author a source of new information?
+    - Does the paper stay focused on its subject?
+    - Are the ideas and methods presented worthwhile, new, or creative?
+    - Does the paper evaluate the strengths and limitations of the work described?
+    - Is the impact of the results clearly stated?
+    - Is the paper free from personalities and bias?
+    - Is the work of others adequately cited?
+    - Are the tables and figures clear, relevant, and correct?
+    - Does the author demonstrate knowledge of basic composition skills, including word choice, sentence structure, paragraph development, grammar, punctuation, and spelling?  
+
+    Article: 
+      {article}
+
+    Review:
+    
+    """.strip()
+)
+
+schema_system_prompt = "You are an expert on metadata mapping. You will be given a metadata file and a schema. You will be expected to map the metadata file to the schema. Finally emit a response of the mapped metadata file."
+
+schema_prompt = (
+    """You are given the initial metadata file using {initial_schema} schema. 
+    Convert the metadata file to {target_schema} schema.
+
     metadata file: 
     ```
       {metadata}
     ```
-    """
+    
+    """.strip()
 )
 
-schema_fair_prompt = (
+enrich_prompt = (
+    """I want you to act as an expert librarian. You are specialised on controlled vocabularies and FAIR practices. 
+    I will give you a metadata file of a scholarly resource. 
+    You will improve the metadata file by: 
+      - normalising creator and contributors names.
+      - inferring sub-properties from property values.
+      - enriching the metadata file with controlled vocabularies.
+      - adding FAIR data recommendations.
+      - adding license information. 
+
+    metadata file: 
+    ```
+      {metadata}
+    ```
+    """.strip()
+)
+
+fair_prompt = (
     """You are given the initial metadata file using {initial_schema} schema and a prompt. 
     Convert the metadata file using information from the metadata file to the {target_schema} schema.
     Include the FAIR data recommendations in the converted metadata file.
 
     initial schema: {initial_schema}
     target schema: {target_schema}
-    metadata file: 
+    metadata file: a
     {metadata}
-    converted metadata file:"""
+    converted metadata file:""".strip()
+)
+
+crosswalk_system_prompt = "You are an expert on crosswalks. You will generate the crosswalk between different metadata schemas."
+
+crosswalk_prompt = (
+    """Generate the crosswalk between  {initial_schema} schema {target_schema} schema.
+        Write the output in a table format.
+    """.strip()
 )
 
 schema_examples_prompt = (
@@ -255,5 +310,5 @@ schema_examples_prompt = (
     target schema: {target_schema}
     metadata file: 
     {metadata}
-    converted metadata file:"""
+    converted metadata file:""".strip()
 )

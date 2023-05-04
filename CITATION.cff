@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Parrot GPT"
+version: "0.2.0"
+date-released: "ADD_RELEASE_DATE_HERE"
+license: "MIT"
+repository-code: "https://github.com/kjgarza/parrot_gpt"
+url: "https://parrot-gpt.readthedocs.io"
+authors:
+  - family-names: "Garza"
+    given-names: "Kristian"
+    orcid: "https://orcid.org/0000-0003-3484-6875"
