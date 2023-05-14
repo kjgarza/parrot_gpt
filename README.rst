@@ -8,7 +8,7 @@ metadata between various schemas using OpenAI’s large language models
 through its API. The library is not limited to specific schemas, but
 currently, some restrictions apply to input and output schemas.
 
-.. figure:: docs/DALL·E2023-02-19%2022.30.16.png
+.. figure:: docs/nigthtingale_logo.png
    :alt: Parrot GPT logo
 
    Parrot GPT logo
