@@ -1,0 +1,48 @@
+{
+  "contributor": [
+    [
+      [
+        {
+          "@type": "Person",
+          "name": "Kristian Garza",
+          "email": "kj.garza@gmail.com",
+          "hermes:contributionRole": [
+            {
+              "@type": "Role",
+              "roleName": "git author",
+              "startTime": "2023-05-24T11:01:43+02:00",
+              "endTime": "2023-05-24T11:01:43+02:00"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "hermes:contributionRole": [
+            {
+              "@type": "Role",
+              "roleName": "git committer",
+              "startTime": "2023-05-24T11:01:43+02:00",
+              "endTime": "2023-05-24T11:01:43+02:00"
+            }
+          ]
+        }
+      ],
+      {
+        "git_branch": "main",
+        "timestamp": "2023-05-24T09:02:30",
+        "harvester": "git"
+      }
+    ]
+  ],
+  "hermes:gitBranch": [
+    [
+      "main",
+      {
+        "timestamp": "2023-05-24T09:02:30",
+        "harvester": "git"
+      }
+    ]
+  ]
+}

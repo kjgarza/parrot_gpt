@@ -1,0 +1,38 @@
+{
+  "contributor": [
+    {
+      "@type": "Person",
+      "name": "Kristian Garza",
+      "email": "kj.garza@gmail.com",
+      "hermes:contributionRole": [
+        {
+          "@type": "Role",
+          "roleName": "git author",
+          "startTime": "2023-05-24T11:01:43+02:00",
+          "endTime": "2023-05-24T11:01:43+02:00"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "hermes:contributionRole": [
+        {
+          "@type": "Role",
+          "roleName": "git committer",
+          "startTime": "2023-05-24T11:01:43+02:00",
+          "endTime": "2023-05-24T11:01:43+02:00"
+        }
+      ]
+    }
+  ],
+  "hermes:gitBranch": "main",
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    {
+      "hermes": "https://software-metadata.pub/ns/hermes/"
+    }
+  ],
+  "@type": "SoftwareSourceCode"
+}
