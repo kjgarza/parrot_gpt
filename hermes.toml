@@ -9,5 +9,5 @@ target = "invenio"
 execute = [ "config_record_id",]
 
 [deposit.invenio]
-site_url = "https://sandbox.zenodo.org"
+site_url = "https://zenodo.org"
 access_right = "open"
