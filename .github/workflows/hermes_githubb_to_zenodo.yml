@@ -97,7 +97,7 @@ jobs:
       # ADAPT
       # If you want to publish artifacts (e.g., a zipped snapshot of your repository),
       # you can prepare this here.
-      - run: git archive --format zip HEAD README.md > showcase.zip
+      - run: git archive --format zip HEAD README.rst > showcase.zip
 
       # Run the HERMES deposition and postprocessing steps.
       # ADAPT
@@ -106,7 +106,7 @@ jobs:
       # 2. Adapt the files you want to deposit. In the example, showcase.zip and README.md are deposited alongside the metadata.
       # 3. Check if you want to run with '--initial', as this may potentially create a completely new record (collection),
       #    rather than a new version of the same collection!
-      - run: hermes deposit --initial --auth-token ${{ secrets.ZENODO_TOKEN }} --file showcase.zip --file README.md
+      - run: hermes deposit --initial --auth-token ${{ secrets.ZENODO_TOKEN }} --file showcase.zip --file README.rst
       
       # ADAPT
       # Remove this command if you don't want to do any postprocessing
