@@ -110,26 +110,26 @@ jobs:
       
       # ADAPT
       # Remove this command if you don't want to do any postprocessing
-      - run: hermes postprocess
+#       - run: hermes postprocess
 
-      # ADAPT
-      # If you don't want to run postprocessing, remove this complete section (next '-run' and 'uses: peter-evans/...' bullets).
-      # 
-      # Note 1: We change the base branch here for the PR. This flow runs so far within the "curated-metadata-*" branch,
-      #         but now we want to add the changes done by deposit and post processing to the branch that was initially
-      #         meant to be published using HERMES.
-      # Note 2: The create-pull-request action will NOT inherit the commits we did in the previous job. It will only look at the
-      #         changes within this local workspace we did *now*.
-      - run: echo "TARGET_BRANCH=$(cat .hermes/curate/target_branch)" >> "$GITHUB_ENV"
-      - uses: peter-evans/create-pull-request@v5
-        with:
-          branch: hermes/post-${{ github.run_id }}
-          base: ${{ env.TARGET_BRANCH }}
-          title: Review hermes post-processing results
-          body: |
-            This is an automated pull request created by HERMES post-processing.
+#       # ADAPT
+#       # If you don't want to run postprocessing, remove this complete section (next '-run' and 'uses: peter-evans/...' bullets).
+#       # 
+#       # Note 1: We change the base branch here for the PR. This flow runs so far within the "curated-metadata-*" branch,
+#       #         but now we want to add the changes done by deposit and post processing to the branch that was initially
+#       #         meant to be published using HERMES.
+#       # Note 2: The create-pull-request action will NOT inherit the commits we did in the previous job. It will only look at the
+#       #         changes within this local workspace we did *now*.
+#       - run: echo "TARGET_BRANCH=$(cat .hermes/curate/target_branch)" >> "$GITHUB_ENV"
+#       - uses: peter-evans/create-pull-request@v5
+#         with:
+#           branch: hermes/post-${{ github.run_id }}
+#           base: ${{ env.TARGET_BRANCH }}
+#           title: Review hermes post-processing results
+#           body: |
+#             This is an automated pull request created by HERMES post-processing.
 
-            Please carefully review the changes and finally merge them into your
+#             Please carefully review the changes and finally merge them into your
 
       # Delete all the curation branches
       - run: |
