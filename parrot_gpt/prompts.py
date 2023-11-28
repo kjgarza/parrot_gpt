@@ -1,3 +1,18 @@
+from .prompts_service import PromptsService
+import yaml
+
+def generate_prompt(task):
+    service = PromptsService()
+    yaml_file_content = service.get_yaml_file("kjgarza/prompts", "parrot_gpt.yml")
+    data = yaml.load(yaml_file_content)
+
+    system_attribute = data['{task}']['system'].replace('\n', ' ').replace('\t', ' ').replace('  ', ' ')
+    user_attribute = data['{task}']['user'].replace('\n', ' ').replace('\t', ' ').replace('  ', ' ')
+    few_shot = data['{task}']['few_shot'].replace('\n', ' ').replace('\t', ' ').replace('  ', ' ')
+    return system_attribute user_attribute few_shot
+
+
+
 EXAMPLES = {
     "metadata": (
         """
