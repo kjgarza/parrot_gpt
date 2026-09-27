@@ -153,3 +153,8 @@ This project is licensed under the MIT License. See the
 .. |Documentation Status| image:: https://readthedocs.org/projects/parrot-gpt/badge/?version=latest
 .. |Updates| image:: https://pyup.io/repos/github/kjgarza/parrot_gpt/shield.svg
 
+Read more
+---------
+
+- `ParrotGPT: On the Advantages of Large Language Models Tools for Academic Metadata Schema Mapping <https://kjgarza.substack.com/p/parrot-gpthtml>`_ (March 2023)
+- `Revolutionizing Metadata Mapping with ChatGPT <https://kjgarza.substack.com/p/coversion_softwarehtml>`_ (January 2023)
